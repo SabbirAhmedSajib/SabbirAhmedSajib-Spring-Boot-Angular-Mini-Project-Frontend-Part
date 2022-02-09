@@ -1,0 +1,209 @@
+<!-- <div>
+    <div class="body">
+        <div class="header">
+            <div align=center>
+                <h2>Corporate Branch</h2>
+                <h4>Drawer  Relase From Customer</h4>
+            </div>           
+            <div align=right>
+                <button mat-raised-button  (click)="postRelease()">Execute</button>
+                <button mat-raised-button color="accent"  style="margin-left: 5px;">Update</button>
+                <button mat-raised-button color="warn" style="margin-left: 5px;">Search</button>
+                <button mat-raised-button color="primary" (click)="ClearPage()" style="margin-left: 5px; margin-right: 100px;">Clear</button>
+                <button mat-raised-button color="warn" style="float: right; padding-right: 10px; margin-right: 20px;">logout</button>  
+            </div>         
+        </div>
+
+        <div class="navbar">
+            <a href="#" class="active"  style="margin-left:15px">Home</a>
+            <a routerLink="/update" style="margin-left:15px">UpadateDrawerRelease</a> 
+        </div>
+        
+
+        <div class="form-container">
+            <form [formGroup]="formValue">
+                <mat-card>
+                    <mat-card-content>
+                            <div align=right class="col-50">
+                                <div>
+                                    <mat-form-field appearance="fill" appearance="outline" >
+                                        <mat-label class="levelname form-control" >Locker ID</mat-label>
+                                        <mat-select matNativeControl required formControlName="lckrid" class="levelname" >
+                                            <mat-option *ngFor="let data of locker" [value]="data.lckrid" >
+                                                {{ data.lckrnam }}
+                                            </mat-option>
+                                          </mat-select>
+                                    </mat-form-field>
+                                </div>
+                                <div>
+                                    <mat-form-field appearance="fill" appearance="outline" >
+                                        <mat-label class="levelname form-control" >Drawer ID</mat-label>
+                                        <mat-select matNativeControl required formControlName="drwrid" class="levelname" >
+                                            <mat-option *ngFor="let data of Drawer" [value]="data.drwrid" >
+                                                {{ data.drwrid }}
+                                            </mat-option>
+                                          </mat-select>
+                                    </mat-form-field>
+                                </div>
+                                
+                                <div>
+                                    <mat-form-field appearance="fill" appearance="outline">
+                                        <mat-label class="levelname form-control" for="actnum">Account Number</mat-label>
+                                        <input matInput formControlName="actnum" (keydown.enter)="onKeyPress($event)" autocomplete="off">
+                                    </mat-form-field>
+                                </div>
+        
+                                <div>
+                                    <mat-form-field appearance="fill" appearance="outline">
+                                        <mat-label class="levelname form-control" for="acttit">Account Title</mat-label>
+                                        <input matInput formControlName="acttit" autocomplete="off">
+                                    </mat-form-field>                       
+                                </div>
+                            
+                            
+                                <div>
+                                    <mat-form-field appearance="fill" appearance="outline">
+                                        <mat-label class="levelname form-control">Deposit Product</mat-label>
+                                        <input matInput formControlName="prdcod" autocomplete="off">
+                                    </mat-form-field>
+                                </div>
+        
+                                <div>
+                                    <mat-form-field appearance="fill" appearance="outline">
+                                        <mat-label class="levelname form-control">For Sale Value</mat-label>
+                                        <input matInput formControlName="saleval" autocomplete="off">
+                                    </mat-form-field>
+                                </div>
+                            
+        
+                                <div>
+                                    <mat-form-field appearance="fill" appearance="outline">
+                                        <mat-label class="levelname form-control">Market Value</mat-label>
+                                        <input matInput formControlName="marketval" autocomplete="off">
+                                    </mat-form-field>
+                                </div>
+        
+                                <div>
+                                    <mat-form-field appearance="fill" appearance="outline">
+                                        <mat-label class="levelname form-control">Caution Money</mat-label>
+                                        <input matInput formControlName="cautionamt" autocomplete="off">
+                                    </mat-form-field>  
+                                </div>       
+                                
+                                <div>
+                                    <mat-form-field appearance="fill" appearance="outline">
+                                        <mat-label class="levelname form-control">Allocation Date</mat-label>
+                                        <input matInput [matDatepicker]="picker" formControlName="reldate" autocomplete="off">
+                                        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                                        <mat-datepicker #picker></mat-datepicker>
+                                    </mat-form-field>
+                                </div>
+                                <div>
+                                    <mat-form-field appearance="fill" appearance="outline">
+                                        <mat-label class="levelname form-control">Remarks</mat-label>
+                                        <input matInput formControlName="remarks" autocomplete="off">
+                                    </mat-form-field>
+                                </div>
+                        </div>                
+                        <div align=right>
+                            <div>
+                                <mat-form-field appearance="fill" appearance="outline">
+                                    <mat-label class="levelname form-control">Customer Name</mat-label>
+                                    <input matInput autocomplete="off">
+                                </mat-form-field>
+                            </div>
+                        
+                            <div>
+                                <mat-form-field appearance="fill" appearance="outline" style="width: 70px; padding-right: 5px;">
+                                    <mat-label class="levelname form-control">Type</mat-label>
+                                    <input matInput autocomplete="off">
+                                </mat-form-field>
+                                <mat-form-field appearance="fill" appearance="outline" style="width: 264px; padding-right: 50px">
+                                    <mat-label class="levelname form-control">Customer Code</mat-label>
+                                    <input matInput formControlName="cuscod" autocomplete="off">
+                                </mat-form-field>
+                            </div>
+                            <div>
+                                <mat-form-field appearance="fill" appearance="outline">
+                                    <mat-label class="levelname form-control">Address1</mat-label>
+                                    <input matInput autocomplete="off">
+                                </mat-form-field>
+                            </div>
+                        
+                            <div>
+                                <mat-form-field appearance="fill" appearance="outline">
+                                    <mat-label class="levelname form-control">Address2</mat-label>
+                                    <input matInput autocomplete="off">
+                                </mat-form-field>
+                            </div>
+                            
+                            <div>
+                                <mat-form-field appearance="fill" appearance="outline">
+                                    <mat-label class="levelname form-control">House</mat-label>
+                                    <input matInput autocomplete="off">
+                                </mat-form-field>
+                            </div>
+        
+                            <div>
+                                <mat-form-field appearance="fill" appearance="outline">
+                                    <mat-label class="levelname form-control">City Name</mat-label>
+                                    <input matInput autocomplete="off">
+                                </mat-form-field>                       
+                            </div>
+                        
+                        
+                            <div>
+                                <mat-form-field appearance="fill" appearance="outline">
+                                    <mat-label class="levelname form-control">Phone No</mat-label>
+                                    <input matInput autocomplete="off">
+                                </mat-form-field>
+                            </div>
+        
+                            <div>
+                                <mat-form-field appearance="fill" appearance="outline">
+                                    <mat-label class="levelname form-control">Release Date</mat-label>
+                                    <input matInput [matDatepicker]="picker1" formControlName="reldate" autocomplete="off">
+                                    <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+                                    <mat-datepicker #picker1></mat-datepicker>
+                                </mat-form-field>
+                            </div>
+        
+                            <div>
+                                <mat-form-field appearance="fill" appearance="outline">
+                                    <mat-label class="levelname form-control">Payment Status</mat-label>
+                                    <select matNativeControl required  formControlName="paystat">
+                                        <option >P</option>
+                                        <option >D</option>
+                                      </select>
+                                </mat-form-field>  
+                            </div> 
+                            <div>
+                                <mat-form-field appearance="fill" appearance="outline">
+                                    <mat-label class="levelname form-control">Due Payment</mat-label>
+                                    <input matInput formControlName="dueamt" autocomplete="off">
+                                </mat-form-field>
+                            </div>
+                    </div>      
+                    </mat-card-content>
+                </mat-card>
+            </form> 
+
+        </div>                            
+    <div class="footer" align=center>
+        <p>Developed & Maintained by: ERA Infotech Ltd.</p>
+    </div>     
+</div>
+ -->
+
+ <form>
+     <mat-card>
+         <mat-card-content>
+            <div>
+                <mat-form-field appearance="fill" appearance="outline">
+                    <mat-label class="levelname form-control" for="acttit">Account Title</mat-label>
+                    <input matInput formControlName="acttit" autocomplete="off">
+                </mat-form-field>                       
+            </div>
+         </mat-card-content>
+     </mat-card>
+ </form>

@@ -1,0 +1,142 @@
+/* .body{
+    height: 700px;
+}
+
+.header{
+    height: 125px;
+    width: 100%;
+    background-color:rgb(175, 175, 175);   
+}
+
+.form-container{
+    margin: 5px;
+    padding-right: 200px;
+    padding-left: 200px;
+    overflow: auto;
+}
+
+ .col-50{
+    width: 47%;
+    float: left;
+     margin-top: 10px; 
+
+}
+
+mat-form-field{
+    margin-left: 10px;
+    width: 350px;
+    height: 1px;
+    border-color: rgb(34, 32, 32);
+    margin-top: 15px;
+    padding-bottom: 10px;
+    font-size: 12px;
+    padding-right: 50px;
+}
+
+mat-level{
+    font-size: 20px;
+}
+textarea{
+    font-size: 12px;
+    row-gap: 0;
+} 
+
+h2{
+    padding-top: 15px;
+    font-size: 40px;
+}
+
+h4{
+    font-size: 25px;
+    margin-block-end: 0em;
+}
+
+mat-raised-button{
+    font-size: 10px;
+    padding-left: 20px;
+}
+
+mat-toolbar{
+    margin-top: 10px;
+}
+
+.footer{
+    height: 40px;
+    margin-top: 10px;
+    padding-top: 15px;
+    font-size: 25px;
+    background-color: rgb(221, 233, 221);
+}
+
+mat-card{
+    height: 570px;
+    width: 950px;
+}
+
+
+
+mat-card {
+    background: white;
+    background-image: initial;
+    background-position-x: initial;
+    background-position-y: initial;
+    background-size: initial;
+    background-attachment: initial;
+    background-origin: initial;
+    background-clip: initial;
+   
+}
+
+mat-card-content{
+    font-size: 16px;
+    color: black;
+    border-color: black;
+}
+mat-level{
+    font-size: 14px;
+    color: black;
+}
+
+.mat-input-element {
+    font: inherit;
+    background: transparent;
+    color: rgb(2, 2, 2); 
+    border: none;
+    outline: none;
+    padding: 0;
+    margin-top: 0;
+    width: 100%;
+    max-width: 100%;
+    vertical-align: bottom;
+    text-align: inherit;
+    box-sizing: content-box;
+    border-color: rgb(12, 12, 12);
+    font-size: 16px;
+}
+.levelname{
+    font-size: 16px;
+    color: black;
+    border-color: white;
+}
+
+.navbar{
+    height:25px;
+    background-color: gray;
+    padding-top:5px;
+}
+.mat-option{
+ width: 200px;
+ margin-left: 20px;
+ color: black;
+}
+style attribute {
+    min-width: 200px;
+    font-size: 16px;
+    bottom: 62.875px;
+    left: 276.5px;
+    transform: translateX(-16px);
+}
+
+.mat-card{
+    margin-top: 10px;
+} */
